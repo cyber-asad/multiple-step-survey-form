@@ -136,7 +136,54 @@
 
 
     <!--        Scripts-->
+    <script src="assets/js/wp-jquery.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        (function ($, w) {
+            "use strict";
+            jQuery(document).ready(function ($) {
+                
+                var popup = $('.mssf-popup');
+                var popup_box_link = popup.find('.mssf-popup-box-link');
+                var single = $('.mssf-step-single');
+                var input_wrap = single.find('.mssf-radio-single');
+
+                //popup.css('display','flex');
+
+                input_wrap.on('click', function (e) {
+                    e.preventDefault;
+                    var input = $(this).find('input');
+                    var parent = $(this).closest('.mssf-step-single');
+                    var parent_next = parent.next();
+                    input.prop("checked", true);
+        
+                    if(parent_next.length){
+                        parent.removeClass('active')
+                        parent_next.addClass('active');
+                    }else{
+                        popup.css('display','flex');
+                    }
+        
+                    //console.log($(this).closest('.mssf-step-single'),parent_next.length);
+                });
+        
+                popup.on('click', function (e) {
+                    e.preventDefault;
+        
+                    console.log( e, popup );
+                    console.log( e.target === popup[0] );
+                    console.dir( e.target, popup );
+
+                    if(e.target === popup_box_link[0] || e.target=== popup[0]){
+                        //alert('popup close');
+                        popup.removeAttr("style"); 
+                    }
+                });
+        
+            });
+        })(jQuery, window);
+        </script>
 
 </body>
 
