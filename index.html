@@ -128,7 +128,7 @@
         <div class="mssf-popup-box">
             <h2 class="mssf-popup-box-title">Your result has been analyzed</h2>
             <h4 class="mssf-popup-box-subtitle">Great news: you're a perfect fit</h4>
-            <a class="mssf-popup-box-link" href="#">*CLICK HERE* - TEACH ME THIS UNUSUAL "WATER HACK" METHOD</a>
+            <a class="mssf-popup-box-link" href="https://github.com/cyber-asad/multiple-step-survey-form">*CLICK HERE* - TEACH ME THIS UNUSUAL "WATER HACK" METHOD</a>
             <p class="mssf-popup-box-text">Your results are secure and will never be shared with anyone.</p>
         </div>
     </div>
@@ -175,10 +175,15 @@
                     console.log( e.target === popup[0] );
                     console.dir( e.target, popup );
 
-                    if(e.target === popup_box_link[0] || e.target=== popup[0]){
+                    if(e.target=== popup[0]){
                         //alert('popup close');
                         popup.removeAttr("style"); 
                     }
+
+                    // if(e.target === popup_box_link[0]){
+                    //     //alert('popup close');
+                    //     //popup.removeAttr("style"); 
+                    // }
                 });
         
             });
