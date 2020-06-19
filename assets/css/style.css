@@ -124,5 +124,8 @@ display: none; padding: 20px; overflow: hidden; box-sizing: border-box;}
         text-transform: none;
         color: #f0f0f0;
     }
-    .mssf-popup-box-text {font-size: 12px;}
+    .mssf-popup-box-text {font-size: 12px; color: #333;}
 
+    .mssf-popup-box-text .fa-lock {
+        font-size: 14px;
+    }
