@@ -1,6 +1,6 @@
 /* Base CSS */
 * {margin: 0; padding: 0;}
-body {font-family: sans-serif; font-size: 14px;}
+body {font-family: sans-serif; font-size: 14px; background: #eee;}
 h1, h2, h3, h4, h5, h6 {margin: 0 0 15px; font-weight: 400;}
 p {margin-bottom: 10px;}
 a {
@@ -22,7 +22,7 @@ img {max-width: 100%; height: auto; border: none;}
 .fix {overflow: hidden:}
 .clearfix:before, .clearfix:after {display: table; content: "";}
 .clearfix:after {clear: both;}
-.container {display: block; margin: 50px auto; max-width: 1170px; background: #eee; padding: 50px; box-sizing: border-box;}
+.container {display: block; margin: 50px auto; max-width: 1170px; background: #fff; padding: 50px; box-sizing: border-box;}
 
 /* Remove Chrome Input Field's Unwanted Yellow Background Color */
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
@@ -71,16 +71,58 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 
 /* Multiple Steps Survey Form Popup Styles */
-.mssf-popup {width: 100vw; height: 100vh; background: rgba(0,0,0, 0.9); position: absolute; top: 0; left: 0; display: flex; 
+.mssf-popup {width: 100vw; height: 100vh; background: rgba(0,0,0, 0.55); position: absolute; top: 0; left: 0; display: flex; 
     align-items: center;
     justify-content: center;
 display: none; padding: 20px; overflow: hidden; box-sizing: border-box;}
 
     .mssf-popup-box {
-        max-width: 600px;
-        background: #ddd;
+        max-width: 550px;
+        background: #fff;
         text-align: center;
-        padding: 30px 30px;
+        padding: 30px 50px;
         border-radius: 5px;
+        box-sizing: border-box;
     }
+    .mssf-popup-box-title {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.4;
+        text-transform: uppercase;
+        max-width: 320px;
+        margin: 0 auto 20px;
+        color: #333;
+    }
+    .mssf-popup-box-subtitle {
+        font-size: 26px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .mssf-popup-box-link {
+        color: #fff;
+        background: rgba(66, 218, 1, 1);
+        border: 3px solid rgba(0,0,0, 0.3);
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.5;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px 25px;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+    .mssf-popup-box-link:hover {
+        background: rgba(66, 218, 1, .8);
+    }
+    .mssf-popup-box-link span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: none;
+        color: #f0f0f0;
+    }
+    .mssf-popup-box-text {font-size: 12px;}
 
