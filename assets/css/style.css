@@ -244,6 +244,7 @@ input:-webkit-autofill:focus {
 
 .mssf-popup-box-link:hover {
 	background: rgba(66, 218, 1, .8);
+	color: #fff;
 }
 
 .mssf-popup-box-link span {
