@@ -29,7 +29,7 @@
                 <h3 class="mssf-step-title">Are you age 40+ and carrying extra pounds you would like to eliminate
                     quickly and safely?</h3>
                 <div class="mssf-progress-bar">
-                    <div class="mssf-progress-counter" style="width: 10%;"></div>
+                    <span class="mssf-progress-counter" style="width: 25%;"></span>
                 </div>
                 <div class="mssf-form">
                     <div class="mssf-radio-single">
@@ -46,7 +46,7 @@
             <div data-mssf="2" class="mssf-step-single">
                 <h3 class="mssf-step-title">This one is important: How much water do you typically drink?</h3>
                 <div class="mssf-progress-bar">
-                    <div class="mssf-progress-counter" style="width: 50%;"></div>
+                    <span class="mssf-progress-counter" style="width: 50%;"></span>
                 </div>
                 <div class="mssf-form">
                     <div class="mssf-radio-single">
@@ -72,7 +72,7 @@
                 <h3 class="mssf-step-title">How many different diets have you tried in the past few years that haven’t
                     lasted?</h3>
                 <div class="mssf-progress-bar">
-                    <div class="mssf-progress-counter" style="width: 75%;"></div>
+                    <span class="mssf-progress-counter" style="width: 75%;"></span>
                 </div>
                 <div class="mssf-form">
                     <div class="mssf-radio-single">
@@ -98,7 +98,7 @@
                 <h3 class="mssf-step-title">Finally, have you been LIED to and led to believe that the only way to lose
                     weight is to exercise every day and eat as little as possible?</h3>
                 <div class="mssf-progress-bar">
-                    <div class="mssf-progress-counter" style="width: 100%;"></div>
+                    <span class="mssf-progress-counter" style="width: 100%;"></span>
                 </div>
                 <div class="mssf-form">
                     <div class="mssf-radio-single">
@@ -128,7 +128,8 @@
         <div class="mssf-popup-box">
             <h2 class="mssf-popup-box-title">Your result has been analyzed</h2>
             <h4 class="mssf-popup-box-subtitle">Great news: you're a perfect fit</h4>
-            <a class="mssf-popup-box-link" href="https://elementorian.com/play/" target="blank">*CLICK HERE* - TEACH ME THIS UNUSUAL "WATER HACK" METHOD</a>
+            <a class="mssf-popup-box-link" href="https://elementorian.com/play/" target="blank">*CLICK HERE* - TEACH ME
+                THIS UNUSUAL "WATER HACK" METHOD</a>
             <p class="mssf-popup-box-text">Your results are secure and will never be shared with anyone.</p>
         </div>
     </div>
@@ -137,13 +138,12 @@
 
     <!--        Scripts-->
     <script src="assets/js/wp-jquery.js"></script>
-    <script src="assets/js/main.js"></script>
 
     <script type="text/javascript">
         (function ($, w) {
             "use strict";
             jQuery(document).ready(function ($) {
-                
+
                 var popup = $('.mssf-popup');
                 var popup_box_link = popup.find('.mssf-popup-box-link');
                 var single = $('.mssf-step-single');
@@ -157,27 +157,27 @@
                     var parent = $(this).closest('.mssf-step-single');
                     var parent_next = parent.next();
                     input.prop("checked", true);
-        
-                    if(parent_next.length){
+
+                    if (parent_next.length) {
                         parent.removeClass('active')
                         parent_next.addClass('active');
-                    }else{
-                        popup.css('display','flex');
+                    } else {
+                        popup.css('display', 'flex');
                     }
-        
+
                     //console.log($(this).closest('.mssf-step-single'),parent_next.length);
                 });
-        
+
                 popup.on('click', function (e) {
                     e.preventDefault;
-        
-                    console.log( e, popup );
-                    console.log( e.target === popup[0] );
-                    console.dir( e.target, popup );
 
-                    if(e.target=== popup[0]){
+                    console.log(e, popup);
+                    console.log(e.target === popup[0]);
+                    console.dir(e.target, popup);
+
+                    if (e.target === popup[0]) {
                         //alert('popup close');
-                        popup.removeAttr("style"); 
+                        popup.removeAttr("style");
                     }
 
                     // if(e.target === popup_box_link[0]){
@@ -185,10 +185,29 @@
                     //     //popup.removeAttr("style"); 
                     // }
                 });
-        
+
             });
         })(jQuery, window);
-        </script>
+    </script>
+
+    <!-- Extra Script for Progress Bar Animation -->
+    <script>
+        (function ($, w) {
+            "use strict";
+            jQuery(document).ready(function ($) {
+
+                $(".mssf-progress-bar span").each(function () {
+                    $(this)
+                        .data("origWidth", $(this).width())
+                        .width(0)
+                        .animate({
+                            width: $(this).data("origWidth")
+                        }, 1200);
+                });
+
+            });
+        })(jQuery, window);
+    </script>
 
 </body>
 
