@@ -132,7 +132,7 @@
             <h2 class="mssf-popup-box-title">Your results have been analyzed</h2>
             <h4 class="mssf-popup-box-subtitle">Great news: you're a perfect fit</h4>
             <a class="mssf-popup-box-link"
-                href="https://hop.clickbank.net/?affiliate=pippy111&vendor=leptitox&cbpage=d4" target="blank">
+                href="https://hop.clickbank.net/?affiliate=pippy111&vendor=leptitox&cbpage=d4">
                 *CLICK
                 HERE* - TEACH ME THIS UNUSUAL "WATER HACK" METHOD <span>& Let Today Be The FIrst Step of a New Health
                     Journey</span>
@@ -157,8 +157,6 @@
                 var single = $('.mssf-step-single');
                 var input_wrap = single.find('.mssf-radio-single');
 
-                //popup.css('display','flex');
-
                 input_wrap.on('click', function (e) {
                     e.preventDefault;
                     var input = $(this).find('input');
@@ -172,8 +170,6 @@
                     } else {
                         popup.css('display', 'flex');
                     }
-
-                    //console.log($(this).closest('.mssf-step-single'),parent_next.length);
                 });
 
                 popup.on('click', function (e) {
@@ -184,14 +180,8 @@
                     console.dir(e.target, popup);
 
                     if (e.target === popup[0]) {
-                        //alert('popup close');
                         popup.removeAttr("style");
                     }
-
-                    // if(e.target === popup_box_link[0]){
-                    //     //alert('popup close');
-                    //     //popup.removeAttr("style"); 
-                    // }
                 });
 
             });
