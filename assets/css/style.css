@@ -1,131 +1,275 @@
 /* Base CSS */
-* {margin: 0; padding: 0;}
-body {font-family: sans-serif; font-size: 14px; background: #eee;}
-h1, h2, h3, h4, h5, h6 {margin: 0 0 15px; font-weight: 400;}
-p {margin-bottom: 10px;}
-a {
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    color: #333;
+
+* {
+	margin: 0;
+	padding: 0;
 }
-input[type="text"], input[type="email"], input[type="password"], textarea {padding: 5px; border: 1px solid #dddddd;}
-input[type="submit"] {padding: 5px 15px; border: none; background: #555555; color: #ffffff; cursor: pointer;}
-a:hover, a:focus {text-decoration: none; outline: 0;}
-img {max-width: 100%; height: auto; border: none;}
-.floatleft {float: left;}
-.floatright {float: right;}
-.alignleft {float: left; margin-right: 15px;}
-.alignright {float: right; margin-left: 15px; }
-.aligncenter {display: block; margin: 0 auto 15px;}
-.fix {overflow: hidden:}
-.clearfix:before, .clearfix:after {display: table; content: "";}
-.clearfix:after {clear: both;}
-.container {display: block; margin: 50px auto; max-width: 1170px; background: #fff; padding: 50px; box-sizing: border-box;}
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+	background: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 15px;
+	font-weight: 400;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+a {
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	padding: 5px;
+	border: 1px solid #dddddd;
+}
+
+input[type="submit"] {
+	padding: 5px 15px;
+	border: none;
+	background: #555555;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: none;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 15px;
+}
+
+.alignright {
+	float: right;
+	margin-left: 15px;
+}
+
+.aligncenter {
+	display: block;
+	margin: 0 auto 15px;
+}
+
+.fix {
+	overflow: hidden:
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.container {
+	display: block;
+	margin: 50px auto;
+	max-width: 1170px;
+	background: #fff;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
 
 /* Remove Chrome Input Field's Unwanted Yellow Background Color */
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
 
 
 /* Multiple Steps Survey Form Styles */
+
 .mssf-wrapper {
-    box-sizing: border-box;
-    width: 100%;
+	box-sizing: border-box;
+	width: 100%;
 }
+
 .mssf-step-single {
-    display: none;
+	display: none;
 }
 
 .mssf-step-single.active {
-    display: block;
+	display: block;
 }
-.mssf-step-title {font-size: 24px; margin-bottom: 25px;}
+
+.mssf-step-title {
+	font-size: 24px;
+	margin-bottom: 25px;
+}
 
 .mssf-progress-bar {
-    height: 10px;
-    width: 100%;
-    max-width: 100%;
-    background-color: #ddd;
-    position: relative;
-    border-radius: 50px;
-    overflow: hidden;
-    margin-bottom: 25px;
+	height: 10px;
+	width: 100%;
+	max-width: 100%;
+	background-color: #ddd;
+	position: relative;
+	border-radius: 50px;
+	overflow: hidden;
+	margin-bottom: 25px;
 }
+
 .mssf-progress-counter {
-    background-color: #ffcc33;
-    display: block;
-    height: 100%;
-    max-width: 100%;
+	background-color: #ffcc33;
+	display: block;
+	height: 100%;
+	max-width: 100%;
 }
-.mssf-form {margin-bottom: 20px;}
-.mssf-radio-single {padding: 15px 15px; border-radius: 3px; cursor: pointer;}
-.mssf-radio-single.active, .mssf-radio-single:hover { background: #ffcc33;}
-.mssf-radio-single input { cursor: pointer;}
-.mssf-radio-single label { cursor: pointer;}
+
+.mssf-form {
+	margin-bottom: 20px;
+}
+
+.mssf-radio-single {
+	padding: 15px 15px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.mssf-radio-single.active,
+.mssf-radio-single:hover {
+	background: #ffcc33;
+}
+
+.mssf-radio-single input {
+	cursor: pointer;
+}
+
+.mssf-radio-single label {
+	cursor: pointer;
+}
+
 .input[type="radio"] {
-    background: #ffcc33;
+	background: #ffcc33;
 }
 
 
 /* Multiple Steps Survey Form Popup Styles */
-.mssf-popup {width: 100vw; height: 100vh; background: rgba(0,0,0, 0.55); position: absolute; top: 0; left: 0; display: flex; 
-    align-items: center;
-    justify-content: center;
-display: none; padding: 20px; overflow: hidden; box-sizing: border-box;}
 
+.mssf-popup {
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.55);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	padding: 20px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.mssf-popup-box {
+	max-width: 550px;
+	background: #fff;
+	text-align: center;
+	padding: 30px 50px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+.mssf-popup-box-title {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-transform: uppercase;
+	max-width: 320px;
+	margin: 0 auto 20px;
+	color: #333;
+}
+
+.mssf-popup-box-subtitle {
+	font-size: 26px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.mssf-popup-box-link {
+	color: #fff;
+	background: rgba(66, 218, 1, 1);
+	border: 3px solid rgba(0, 0, 0, 0.3);
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 10px 25px;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+
+.mssf-popup-box-link:hover {
+	background: rgba(66, 218, 1, .8);
+}
+
+.mssf-popup-box-link span {
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: none;
+	color: #f0f0f0;
+}
+
+.mssf-popup-box-text {
+	font-size: 12px;
+	color: #333;
+}
+
+.mssf-popup-box-text .fa-lock {
+	font-size: 14px;
+}
+
+/* Mobile Layout: 360px to 767px. */
+@media only screen and (max-width: 767px) {
+    .mssf-popup {
+        padding: 0;
+    }
     .mssf-popup-box {
-        max-width: 550px;
-        background: #fff;
-        text-align: center;
-        padding: 30px 50px;
-        border-radius: 5px;
-        box-sizing: border-box;
+        padding: 30px 20px;
     }
-    .mssf-popup-box-title {
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 1.4;
-        text-transform: uppercase;
-        max-width: 320px;
-        margin: 0 auto 20px;
-        color: #333;
-    }
-    .mssf-popup-box-subtitle {
-        font-size: 26px;
-        color: #333;
-        margin-bottom: 20px;
-    }
-    .mssf-popup-box-link {
-        color: #fff;
-        background: rgba(66, 218, 1, 1);
-        border: 3px solid rgba(0,0,0, 0.3);
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1.5;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 10px 25px;
-        box-sizing: border-box;
-        border-radius: 3px;
-    }
-    .mssf-popup-box-link:hover {
-        background: rgba(66, 218, 1, .8);
-    }
-    .mssf-popup-box-link span {
-        display: block;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: none;
-        color: #f0f0f0;
-    }
-    .mssf-popup-box-text {font-size: 12px; color: #333;}
-
-    .mssf-popup-box-text .fa-lock {
-        font-size: 14px;
-    }
+}
