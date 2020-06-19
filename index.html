@@ -192,25 +192,6 @@
         })(jQuery, window);
     </script>
 
-    <!-- Extra Script for Progress Bar Animation -->
-    <script>
-        (function ($, w) {
-            "use strict";
-            jQuery(document).ready(function ($) {
-
-                $(".mssf-progress-bar span").each(function () {
-                    $(this)
-                        .data("origWidth", $(this).width())
-                        .width(0)
-                        .animate({
-                            width: $(this).data("origWidth")
-                        }, 1200);
-                });
-
-            });
-        })(jQuery, window);
-    </script>
-
 </body>
 
 </html>
